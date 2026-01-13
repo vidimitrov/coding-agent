@@ -204,11 +204,8 @@ async function runAgent(userMessage: string) {
   const systemPrompt = `You are a coding assistant. Working directory: ${cwd}
 Use tools to help the user. Be concise.`;
 
-  let iterations = 0;
-  const maxIterations = 20;
-
   // Keep looping until Claude stops calling tools
-  while (iterations++ < maxIterations) {
+  while (true) {
     const response = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 4096,
@@ -394,10 +391,7 @@ async function runAgent(userMessage: string) {
   const systemPrompt = `You are a coding assistant. Working directory: ${cwd}
 Use tools to help the user. Be concise.`;
 
-  let iterations = 0;
-  const maxIterations = 20;
-
-  while (iterations++ < maxIterations) {
+  while (true) {
     const response = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 4096,
@@ -525,7 +519,14 @@ console.log(`${c.dim}Working directory: ${cwd}${c.reset}\n`);
 
 const prompt = () => {
   rl.question(`${c.yellow}› ${c.reset}`, async (input) => {
-    // ... rest stays the same
+    if (input.toLowerCase() === "exit") {
+        rl.close();
+        return;
+      }
+      if (input.trim()) {
+        await runAgent(input);
+      }
+      prompt();
   });
 };
 ```
@@ -656,4 +657,4 @@ The rabbit hole goes deep. Enjoy exploring!
 
 ## Full Final Code
 
-See `agent.ts` in this repository for the complete working example.
+See the [examples](./examples) in this repository for different complete working examples
