@@ -80,7 +80,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-### Demo It
+### Run It
 
 ```bash
 bun agent.ts
@@ -140,7 +140,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-### Demo It
+### Run It
 
 ```bash
 bun agent.ts
@@ -257,7 +257,7 @@ Use tools to help the user. Be concise.`;
 runAgent("List files in the current directory").catch(console.error);
 ```
 
-### Demo It
+### Run It
 
 ```bash
 bun agent.ts
@@ -460,7 +460,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-### Demo It
+### Run It
 
 ```bash
 bun agent.ts
@@ -530,7 +530,7 @@ const prompt = () => {
 };
 ```
 
-### Demo It
+### Run It
 
 ```bash
 bun agent.ts
