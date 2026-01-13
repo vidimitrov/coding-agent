@@ -1,0 +1,26 @@
+{
+  "name": "mini-agent",
+  "version": "1.0.0",
+  "main": "mini-agent.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidimitrov/coding-agent.git"
+  },
+  "author": "Veselin Dimitrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vidimitrov/coding-agent/issues"
+  },
+  "homepage": "https://github.com/vidimitrov/coding-agent#readme",
+  "description": "",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
