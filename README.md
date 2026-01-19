@@ -1,3 +1,5 @@
+> Check [Buildforce CLI](https://github.com/berserkdisruptors/buildforce-cli) if you are looking for a context engine for your coding agent.
+
 # Building a Coding Agent in Under 250 Lines
 
 A hands-on tutorial to build a fully functional AI coding agent from scratch. By the end, you'll have an agent that can read files, write code, run commands—and even improve itself.
